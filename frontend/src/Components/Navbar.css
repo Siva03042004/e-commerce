@@ -1,0 +1,138 @@
+/* Basic Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #333;
+    color: #fff;
+    border-radius: 14px;
+  }
+  
+  .navbar-logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    margin: auto;
+    margin-left: 0px;
+    color: white;
+    text-shadow: 1px 1px whitesmoke;
+  }
+  
+  /* Hamburger Menu */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 0.3rem;
+    cursor: pointer;
+  }
+  
+  .hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 3px;
+  }
+  
+  /* Navbar Links for Larger Screens */
+  .navbar-links {
+    display: flex;
+    gap: 1.5rem;
+    margin:auto;
+    margin-right: 0;
+  }
+  
+  .navbar-links li {
+    list-style: none;
+  }
+  
+  .navbar-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-links a:hover {
+    color: #f39c12;
+  }
+  
+  /* Close Button for the Sliding Menu */
+  .close-btn {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    cursor: pointer;
+    display: none;
+  }
+  
+  /* Sliding Menu for Small Screens */
+  .navbar-links {
+    position: fixed;
+    right: -250px;
+    top: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #333;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.3s ease;
+  }
+  
+  .navbar-links.open {
+    right: 0;
+  }
+  .logoutbtn{
+    color: white;
+    background-color: red;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  /* Responsive: Show hamburger menu only on smaller screens (less than 768px) */
+  @media (max-width: 768px) {
+    .navbar-links {
+      display: none;
+    }
+  
+    .navbar-links.open {
+      display: flex;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+  
+    .close-btn {
+      display: block;
+    }
+  }
+  
+  /* Default navbar links are visible on larger screens */
+  @media (min-width: 768px) {
+    .navbar-links {
+      position: static;
+      height: auto;
+      width: auto;
+      flex-direction: row;
+      background-color: transparent;
+      gap: 2 rem;
+    }
+  
+    .close-btn {
+      display: none;
+    }
+  
+    .hamburger {
+      display: none;
+    }
+  }
+  
