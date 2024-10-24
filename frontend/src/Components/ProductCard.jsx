@@ -18,7 +18,7 @@ const ProductCard = ({ product }) => {
     };
 
     try {
-      const response = await fetch(`http://localhost:4000/cart`, {
+      const response = await fetch('https://e-commerce-1erh.onrender.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

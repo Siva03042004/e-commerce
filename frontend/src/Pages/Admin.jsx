@@ -40,7 +40,7 @@ const Admin = () => {
       return;
     }
 
-    const response = await fetch('http://localhost:4000/products', {
+    const response = await fetch('https://e-commerce-1erh.onrender.com', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

@@ -10,7 +10,7 @@ const Cart = () => {
 
   const fetchCartItems = async () => {
     try {
-      const response = await fetch(`http://localhost:4000/cart`);
+      const response = await fetch(`https://e-commerce-1erh.onrender.com/cart`);
       if (!response.ok) throw new Error('Failed to fetch cart items');
 
       const data = await response.json();
@@ -28,7 +28,7 @@ const Cart = () => {
 
   const handleDeleteItem = async (id) => {
     try {
-      const response = await fetch(`http://localhost:4000/cart/${id}`, {
+      const response = await fetch(`https://e-commerce-1erh.onrender.com/cart/${id}`, {
         method: 'DELETE',
       });
       if (!response.ok) throw new Error('Failed to delete item');
@@ -44,7 +44,7 @@ const Cart = () => {
     const updatedItem = { quantity: newQuantity };
 
     try {
-      const response = await fetch(`http://localhost:4000/cart/${id}`, {
+      const response = await fetch(`https://e-commerce-1erh.onrender.com/cart/${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(updatedItem),
@@ -63,7 +63,7 @@ const Cart = () => {
   const handlePlaceOrder = async () => {
     if (!window.confirm('Are you sure you want to place the order?')) return;
     try {
-      const response = await fetch(`http://localhost:4000/cart`, {
+      const response = await fetch(`https://e-commerce-1erh.onrender.com/cart`, {
         method: 'DELETE',
       });
 

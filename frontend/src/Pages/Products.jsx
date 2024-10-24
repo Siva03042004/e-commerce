@@ -12,7 +12,7 @@ const Products = () => {
 
   const getProducts = async () => {
     try {
-      const response = await fetch(`http://localhost:4000/products`);  // Use the environment variable
+      const response = await fetch(`https://e-commerce-1erh.onrender.com/products`);  // Use the environment variable
       if (!response.ok) {
         throw new Error('Failed to fetch products');
       }
